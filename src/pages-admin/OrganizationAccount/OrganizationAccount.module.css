@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 500;
+}
+
+.logo {
+  position: absolute;
+  top: 0px;
+  left: 16px;
+}
+
+.title {
+  color: #2c3531;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.container_input {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 260px;
+  border-radius: 8px;
+  margin-top: 8px;
+  background-color: #e9f4f1;
+}
+
+.input_logo {
+  margin-bottom: 3px;
+  margin-right: 9px;
+}
+.signup_inputs {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 31px;
+}
+
+.signup_inputs input {
+  border: none;
+  background-color: #e9f4f1;
+  width: 210px;
+  height: 27px;
+  position: relative;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  color: #116466;
+}
+
+.signup_btn {
+  background-color: #116466;
+  width: 140px;
+  height: 30px;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  border: 0;
+  cursor: pointer;
+}
+.signup_btn_link {
+  text-decoration: none;
+}
+
+.signin_text {
+  color: #116466;
+  font-size: 10px;
+  margin-bottom: -30px;
+}
+
+.signin_link {
+  color: #2c3531;
+  text-decoration: none;
+}
+
+.illustration {
+  background-color: #116466;
+  width: 400px;
+  height: 452px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover {
+  background-color: white;
+  width: 400px;
+  height: 452px;
+  position: relative;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+}
+
+.page {
+  min-height: 100vh;
+  background-color: #e9f4f1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

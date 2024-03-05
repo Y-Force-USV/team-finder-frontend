@@ -1,0 +1,17 @@
+.projectsContainer {
+  display: flex;
+  flex-grow: 1;
+  padding: 40px;
+  background-color: #116466;
+  text-align: center;
+  color: white;
+  width: calc(100%-220px);
+  margin-left: 38px;
+  height: 43px;
+  margin-top: 41px;
+  margin-right: 32px;
+  border-radius: 8px;
+}
+.pageContainer {
+  display: flex;
+}

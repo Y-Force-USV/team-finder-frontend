@@ -1,0 +1,115 @@
+.sidebar_cover {
+  min-height: 100vh;
+  background-color: white;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e9f4f1;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.main_buttons {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 227px;
+}
+
+.main_buttons button {
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: none;
+  display: flex;
+  align-items: center;
+  width: 152px;
+  height: 32px;
+  color: #116466;
+  margin-bottom: 15px;
+}
+
+.main_buttons button:hover {
+  background-color: #e9f4f1;
+}
+
+.link_page {
+  text-decoration: none;
+}
+
+.footer_buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.page_icon {
+  margin-left: 10px;
+  margin-right: 21px;
+}
+
+.logout_link {
+  text-decoration: none;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.footer_buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_buttons button {
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: none;
+  display: flex;
+  align-items: center;
+  width: 152px;
+  height: 32px;
+  color: #116466;
+  margin-bottom: 13px;
+}
+
+.footer_buttons button:hover {
+  background-color: #e9f4f1;
+}
+
+.organization_name {
+  margin-bottom: 10px;
+  color: #2c3531;
+}
+
+.organization_admin {
+  color: #116466;
+}
+
+body {
+  background-color: #e9f4f1;
+}
+
+.logout_link {
+  text-decoration: none;
+}

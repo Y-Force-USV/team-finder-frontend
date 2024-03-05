@@ -1,0 +1,20 @@
+/* DashboardOrganization.module.css */
+.message {
+  display: flex;
+  flex-grow: 1;
+  padding: 40px;
+  background-color: #116466;
+  text-align: right;
+  color: white;
+  width: calc(100%-220px);
+  margin-left: 50px;
+  margin-right: 43px;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  height: 37px;
+  text-align: center;
+  border-radius: 8px;
+}
+.departments_container {
+  display: flex;
+}
