@@ -1,0 +1,74 @@
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 93vh;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+.cover {
+  background-color: #e9f4f1;
+  width: 1000px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #116466;
+  border-radius: 8px;
+}
+
+.logo {
+  margin-bottom: 80px;
+}
+
+.content {
+  text-align: center;
+  margin-top: 60px;
+}
+.quote {
+  color: #116466;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.account_type {
+  display: flex;
+  justify-content: space-between;
+}
+
+.square {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f7f9f9;
+  border-radius: 15px;
+  width: 100px;
+  height: 100px;
+  margin: 0 20px;
+  text-decoration: none;
+}
+.square img {
+  width: 45px;
+  height: 45px;
+  justify-content: center;
+  margin-top: 15px;
+}
+.square p {
+  color: #2c3531;
+  margin-top: 8px;
+  font-size: 16px;
+  margin-left: 5px;
+  text-decoration: none;
+}
+.message {
+  color: #2c3531;
+  margin-top: 8px;
+  font-size: 22px;
+  text-align: center;
+  margin-top: 30px;
+  justify-content: center;
+  text-align: center;
+}

@@ -1,41 +1,144 @@
-body {
-  margin: 0;
-  height: 100%;
-  padding: 0%;
-}
-
-.page {
-  display: flex;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.message {
-  background-color: #116466;
-  text-align: right;
-  color: white;
-  width: 100%;
-  height: 30px;
-  margin: 0;
-}
-
 .employees_container {
   display: flex;
   margin: 0;
   padding: 0;
+  flex-direction: column;
 }
+
 .buttons {
+  align-items: center;
   display: flex;
-  margin-top: 55px;
+  justify-content: space-between;
+}
+
+.left_buttons {
+  display: flex;
+  background-color: white;
   height: 30px;
+  width: 90px;
+  border-radius: 10px;
 }
-.search_btn {
-  margin-left: 260px;
+
+.right_buttons {
+  display: flex;
+  height: 30px;
+  margin-left: auto;
+}
+
+.filter_btn {
+  background-color: white;
+  border: none;
+  color: #116466;
+}
+
+.filter_img {
+  color: #116466;
+  margin-top: 7px;
+  margin-right: 5px;
+  margin-left: 10px;
+}
+
+.search_form {
   width: 214px;
-}
-.add_btn {
+  border: none;
   margin-right: 20px;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+.add_btn {
+  display: flex;
+  margin-right: 50px;
   width: 124px;
   background-color: #116466;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.employee_card {
+  margin-top: 40px;
+  width: 279px;
+  height: 253px;
+  background-color: white;
+  border-radius: 10px;
+  display: column;
+  position: relative;
+}
+
+.profile {
+  background-color: #f7f9f9;
+  height: 59px;
+  width: 59px;
+  margin-left: 9px;
+  margin-top: 4px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.info {
+  margin-left: 16px;
+}
+
+.name {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.role {
+  color: #116466;
+  margin-top: 8.7px;
+}
+
+.info_card {
+  width: 244px;
+  height: 111px;
+  background-color: #f7f9f9;
+  margin-left: 16px;
+  margin-top: 7px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.information_img {
+  position: absolute;
+  margin-left: 230px;
+  margin-top: -60px;
+  margin-right: 18px;
+}
+
+.card_text {
+  margin-top: 10px;
+}
+
+.department {
+  margin-left: 20px;
+  color: #116466;
+  margin-top: 15px;
+}
+
+.department_name {
+  margin-left: 20px;
+  color: black;
+  margin-top: 7px;
+  font-size: 12px;
+}
+
+.email {
+  margin-top: 32px;
+  margin-left: 20px;
+  display: flex;
+}
+
+.employee_email {
+  font-size: small;
+  margin-left: 6px;
+  color: black;
 }

@@ -41,7 +41,7 @@
 .main_buttons {
   display: flex;
   flex-direction: column;
-  margin-bottom: 227px;
+  margin-bottom: 180px;
   border-radius: 0%;
 }
 
@@ -103,7 +103,7 @@
   width: 152px;
   height: 32px;
   color: #116466;
-  margin-bottom: 13px;
+  margin-bottom: 15px;
 }
 
 .footer_buttons button:hover {

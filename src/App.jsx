@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  Navigate,
   useLocation,
 } from "react-router-dom";
 import "./App.css";
@@ -18,7 +19,7 @@ import SignInEmployee from "./pages-employee/SignInEmployee/SignInEmployee";
 import SidebarEmployee from "./components/SidebarEmployee/SidebarEmployee";
 import Profile from "./pages-employee/Profile/Profile";
 import Projects from "./pages-employee/Projects/Projects";
-import Home from "./Home";
+import Home from "./Home/Home";
 
 function App() {
   const { pathname } = useLocation();
@@ -49,6 +50,7 @@ function App() {
         <div className="contents">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/signup-admin" element={<OrganizationAccount />} />
             <Route path="/signin-admin" element={<SignInAdmin />} />
             <Route
