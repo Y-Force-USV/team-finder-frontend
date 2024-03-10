@@ -2,19 +2,129 @@
 .message {
   display: flex;
   flex-grow: 1;
-  padding: 40px;
   background-color: #116466;
-  text-align: right;
   color: white;
   width: calc(100%-220px);
-  margin-left: 50px;
+  margin-left: 60px;
   margin-right: 43px;
-  margin-top: 40px;
+  margin-top: auto;
   margin-bottom: 16px;
-  height: 37px;
-  text-align: center;
+  height: 60px;
   border-radius: 8px;
+  text-align: center;
+  align-items: center;
 }
+
+.message p {
+  margin-left: 35px;
+  font-size: 25px;
+}
+
 .departments_container {
   display: flex;
+  flex-direction: column;
+  
+  margin: 0;
+  padding: 0;
+  max-height: 93vh;
+}
+
+.search_department {
+  border: none;
+  margin-right: 30px;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.search_input {
+  border: none;
+  width: 180px;
+  height: 25px;
+  margin-left: 5px;
+}
+
+.search_img {
+  margin-right: 10px;
+}
+
+.right_buttons {
+  display: flex;
+  height: 30px;
+  margin-left: auto;
+}
+
+.add_btn {
+  display: flex;
+  margin-right: 50px;
+  width: 124px;
+  background-color: #116466;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.table {
+  border-collapse: collapse;
+  /* margin: 40px 0; */
+  border-radius: 8px;
+  width: 856px;
+  height: 60px;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.header {
+  font-weight: bold;
+  color: #116466;
+  margin-left: 20px;
+  border-radius: 8px;
+}
+
+.header th {
+  text-align: left;
+  padding: 15px;
+}
+
+.departments {
+  /* display: table-row; */
+  background-color: white;
+  overflow: hidden;
+  margin: 0;
+}
+
+.departments td {
+  padding: 15px;
+  color: #116466;
+  margin: 0;
+}
+
+table td:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+table td:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.departments:hover {
+  transform: scale(1.01);
+}
+
+.delete {
+  margin-right: 0px;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  margin-top: 18px;
+  margin-bottom: 18px;
 }

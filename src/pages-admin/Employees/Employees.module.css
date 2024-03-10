@@ -3,12 +3,14 @@
   margin: 0;
   padding: 0;
   flex-direction: column;
+  max-height: 93vh;
 }
 
 .buttons {
   align-items: center;
   display: flex;
   justify-content: space-between;
+  margin-top: 19px;
 }
 
 .left_buttons {
@@ -17,12 +19,14 @@
   height: 30px;
   width: 90px;
   border-radius: 10px;
+  margin-left: 95px;
 }
 
 .right_buttons {
   display: flex;
   height: 30px;
   margin-left: auto;
+  margin-right: 45px;
 }
 
 .filter_btn {
@@ -38,12 +42,25 @@
   margin-left: 10px;
 }
 
-.search_form {
-  width: 214px;
+.search_employee {
   border: none;
-  margin-right: 20px;
+  margin-right: 30px;
   border-radius: 10px;
-  padding-left: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.search_input {
+  border: none;
+  width: 180px;
+  height: 25px;
+  margin-left: 8px;
+}
+
+.search_img {
+  margin-right: 10px;
 }
 
 .add_btn {
@@ -67,6 +84,7 @@
   border-radius: 10px;
   display: column;
   position: relative;
+  justify-content: space-between;
 }
 
 .profile {
@@ -89,11 +107,13 @@
 .name {
   display: inline-block;
   margin-right: 5px;
+  font-size: 14px;
 }
 
 .role {
   color: #116466;
-  margin-top: 8.7px;
+  margin-top: 7px;
+  font-size: 12px;
 }
 
 .info_card {
@@ -141,4 +161,22 @@
   font-size: small;
   margin-left: 6px;
   color: black;
+}
+
+.top_cards {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  padding: 0 65px;
+}
+
+.bottom_cards {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  padding: 0 65px;
+}
+
+.cards {
+  margin-top: 12px;
 }
