@@ -71,6 +71,7 @@ input[type="password"] {
 
 .signin_link {
   text-decoration: none;
+  margin-left: 58px;
 }
 
 .signup_text {

@@ -19,6 +19,7 @@ import SignInEmployee from "./pages-employee/SignInEmployee/SignInEmployee";
 import SidebarEmployee from "./components/SidebarEmployee/SidebarEmployee";
 import Profile from "./pages-employee/Profile/Profile";
 import Projects from "./pages-employee/Projects/Projects";
+import Modal from "./components/Modal/Modal";
 import Home from "./Home/Home";
 
 function App() {

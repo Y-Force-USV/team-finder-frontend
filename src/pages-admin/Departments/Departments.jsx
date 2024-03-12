@@ -1,8 +1,21 @@
-import React from "react";
+// import React from "react";
+import React, { useState } from "react";
 import DepartmentsCSS from "./Departments.module.css";
 import Search from "../../assets/search.svg";
 import Delete from "../../assets/delete.svg";
+import Modal from "../../components/Modal/Modal";
+
 function Departments() {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
   return (
     <div className={DepartmentsCSS.departments_container}>
       <div className={DepartmentsCSS.message}>
@@ -24,7 +37,10 @@ function Departments() {
             height={"15px"}
           ></img>
         </div>
-        <button className={DepartmentsCSS.add_btn}>+ ADD NEW</button>
+        <button className={DepartmentsCSS.add_btn} onClick={openModal}>
+          + ADD NEW{" "}
+        </button>
+        {modalIsOpen && <Modal isOpen={modalIsOpen} closeModal={closeModal} />}
       </div>
       <table className={DepartmentsCSS.table}>
         <thead>
