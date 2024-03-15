@@ -21,6 +21,7 @@ import Profile from "./pages-employee/Profile/Profile";
 import Projects from "./pages-employee/Projects/Projects";
 import Modal from "./components/Modal/Modal";
 import Home from "./Home/Home";
+import OrgEmployee from "./pages-admin/OrgEmployee/OrgEmployee";
 
 function App() {
   const { pathname } = useLocation();
@@ -32,6 +33,7 @@ function App() {
     "/dashboard-admin",
     "/employees",
     "/departments",
+    "/orgemployee",
   ].includes(pathname);
 
   return (
@@ -41,7 +43,8 @@ function App() {
           <div className="sidebar">
             {pathname.startsWith("/dashboard-admin") ||
             pathname.startsWith("/employees") ||
-            pathname.startsWith("/departments") ? (
+            pathname.startsWith("/departments") ||
+            pathname.startsWith("/orgemployee") ? (
               <SidebarAdmin />
             ) : (
               <SidebarEmployee />
@@ -65,6 +68,7 @@ function App() {
             <Route path="/dashboard-employee" element={<DashboardEmployee />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/orgemployee" element={<OrgEmployee />} />
           </Routes>
         </div>
       </div>

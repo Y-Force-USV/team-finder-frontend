@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import EmployeesCSS from "./Employees.module.css";
 import Account from "../../assets/account.svg";
 import Email from "../../assets/email.svg";
@@ -35,7 +36,7 @@ function Employees() {
               height={"15px"}
             ></img>
           </div>
-          <button className={EmployeesCSS.add_btn}>+ ADD NEW</button>
+          <button className={EmployeesCSS.add_btn}>GENERATE URL</button>
         </div>
       </div>
       <div className={EmployeesCSS.cards}>
@@ -52,11 +53,13 @@ function Employees() {
                 />
               </div>
               <div>
-                <img
-                  className={EmployeesCSS.information_img}
-                  src={MoreInformation}
-                  alt="Information"
-                />
+                <Link to="/orgemployee">
+                  <img
+                    className={EmployeesCSS.information_img}
+                    src={MoreInformation}
+                    alt="Information"
+                  />
+                </Link>
               </div>
             </div>
 
