@@ -1,0 +1,71 @@
+.profile {
+  background-color: #f7f9f9;
+  height: 90px;
+  width: 90px;
+  margin-left: 40px;
+  margin-top: 30px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.employee {
+  display: flex;
+  align-items: center;
+  margin-left: 100px;
+}
+
+.name {
+  font-size: 28px;
+}
+
+.role {
+  font-size: 23px;
+  color: #116466;
+}
+
+.info {
+  margin-left: 16px;
+  margin-top: 17px;
+}
+
+.employee_info {
+  height: 350px;
+  width: 700px;
+  background-color: #116466;
+  margin-top: 50px;
+  margin-left: 150px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.department {
+  margin-left: 30px;
+  top: 15px;
+  position: absolute;
+  display: flex;
+  color: white;
+}
+
+.skills {
+  top: 40px;
+  margin-left: 30px;
+  position: absolute;
+  display: flex;
+  color: white;
+}
+
+.email {
+  position: absolute;
+  margin-top: 300px;
+  display: flex;
+  margin-left: 400px;
+}
+
+.employee_email {
+  color: white;
+  margin-left: 5px;
+}
