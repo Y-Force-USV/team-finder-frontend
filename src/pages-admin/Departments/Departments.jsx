@@ -18,6 +18,11 @@ function Departments() {
 
   return (
     <div className={DepartmentsCSS.departments_container}>
+      {modalIsOpen && (
+        <div
+          className={`${DepartmentsCSS.departments_backdrop} ${DepartmentsCSS.active}`}
+        />
+      )}
       <div className={DepartmentsCSS.message}>
         <p> Here are your departments!</p>
       </div>
@@ -37,12 +42,25 @@ function Departments() {
             height={"15px"}
           ></img>
         </div>
-        <button className={DepartmentsCSS.add_btn} onClick={openModal}>
+        <button
+          className={`${DepartmentsCSS.add_btn} ${
+            modalIsOpen ? DepartmentsCSS.modalOpen : ""
+          }`}
+          onClick={openModal}
+        >
           + ADD NEW{" "}
         </button>
-        {modalIsOpen && <Modal isOpen={modalIsOpen} closeModal={closeModal} />}
+        {modalIsOpen && (
+          <div className={DepartmentsCSS.modal_container}>
+            <Modal isOpen={modalIsOpen} closeModal={closeModal} />
+          </div>
+        )}
       </div>
-      <table className={DepartmentsCSS.table}>
+      <table
+        className={`${DepartmentsCSS.table} ${
+          modalIsOpen ? DepartmentsCSS.modalOpen : ""
+        }`}
+      >
         <thead>
           <tr className={DepartmentsCSS.header}>
             <th></th>
