@@ -29,7 +29,7 @@ function Home() {
 
           <Link to="/signup-employee" className={HomeCSS.square}>
             <img src={Account} alt="Account" className={HomeCSS.icons} />
-            <p>Employees</p>
+            <p>Employee</p>
           </Link>
         </div>
         <p className={HomeCSS.message}>Your journey starts with a click!</p>
