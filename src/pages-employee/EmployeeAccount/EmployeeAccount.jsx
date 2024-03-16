@@ -11,11 +11,48 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 function EmployeeAccount() {
-  const navigate = useNavigate();
-  const handleSignUp = () => {
-    navigate("/dashboard");
-  };
   const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+
+  const validateForm = () => {
+    if (!name || !email || !password) {
+      setError("Please fill in all fields!");
+      return false;
+    }
+    setError("");
+    return true;
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
+    try {
+      const url = "ENDPOINT";
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, password }),
+      });
+
+      // const result = await response.json();
+      // if (!response.ok) {
+      //   throw new Error(`Error:`);
+      // }
+
+      navigate("/dashboard-employee");
+    } catch (error) {
+      alert(error.message);
+    }
+  };
+
   return (
     <div className={EmployeeAccountCSS.page}>
       <div className={EmployeeAccountCSS.container}>
@@ -28,14 +65,25 @@ function EmployeeAccount() {
             <img src={Logo} alt="Logo" width={"160px"} height="50px" />
           </div>
           <h1 className={EmployeeAccountCSS.title}>Create account</h1>
-          <div className={EmployeeAccountCSS.signup_inputs}>
+
+          <form
+            className={EmployeeAccountCSS.signup_inputs}
+            onSubmit={handleSubmit}
+          >
+            {error && <p className="error-message">{error}</p>}
             <div className={EmployeeAccountCSS.container_input}>
               <img
                 src={Person}
                 alt="Name"
                 className={EmployeeAccountCSS.input_logo}
-              ></img>
-              <input type="text" placeholder="Name" required />
+              />
+              <input
+                type="text"
+                placeholder="Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
             </div>
 
             <div className={EmployeeAccountCSS.container_input}>
@@ -44,7 +92,13 @@ function EmployeeAccount() {
                 alt="Email"
                 className={EmployeeAccountCSS.input_logo}
               ></img>
-              <input type="email" placeholder="Email" required />
+              <input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
             </div>
 
             <div className={EmployeeAccountCSS.container_input}>
@@ -53,29 +107,30 @@ function EmployeeAccount() {
                 alt="Password"
                 className={EmployeeAccountCSS.input_logo}
               ></img>
-              <input type="password" placeholder="Password" required />
+              <input
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
             </div>
+
+            <div className={EmployeeAccountCSS.signup_btn_link}>
+              <button className={EmployeeAccountCSS.signup_btn}>SIGN UP</button>
+            </div>
+          </form>
+          <div className={EmployeeAccountCSS.signin}>
+            <p className={EmployeeAccountCSS.signin_text}>
+              Already have an account?{" "}
+              <Link
+                className={EmployeeAccountCSS.signin_link}
+                to="/signin-employee"
+              >
+                Sign in
+              </Link>
+            </p>
           </div>
-          <Link
-            className={EmployeeAccountCSS.signup_btn_link}
-            to="/dashboard-employee"
-          >
-            <button
-              className={EmployeeAccountCSS.signup_btn}
-              onClick={handleSignUp}
-            >
-              SIGN UP
-            </button>
-          </Link>
-          <p className={EmployeeAccountCSS.signup_text}>
-            Already have an account?{" "}
-            <Link
-              className={EmployeeAccountCSS.signup_link}
-              to="/signin-employee"
-            >
-              Sign in
-            </Link>
-          </p>
         </div>
         <div className={EmployeeAccountCSS.illustration}>
           <img src={Illustration} />
