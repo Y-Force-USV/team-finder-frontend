@@ -1,17 +1,210 @@
 .profileContainer {
   display: flex;
-  flex-grow: 1;
-  padding: 40px;
-  background-color: #116466;
-  text-align: center;
-  color: white;
-  width: calc(100%-220px);
-  margin-left: 38px;
-  height: 43px;
-  margin-top: 41px;
-  margin-right: 32px;
-  border-radius: 8px;
+  flex-direction: column;
+  align-items: left;
 }
-.pageContainer {
+.message {
+  font-style: "League Spartan";
+  font-size: 20px;
+  color: white;
+  margin-left: 8px;
+}
+.container {
   display: flex;
+  align-items: center;
+  background-color: #116466;
+  border-radius: 8px;
+  width: 970px;
+  height: 63px;
+  margin-left: 42px;
+}
+.card {
+  margin-top: 97px;
+  border-radius: 30px;
+  width: 516px;
+  height: 437px;
+  background-color: white;
+  margin-left: 42px;
+}
+.icon {
+  width: 40px;
+  height: 42px;
+  border-radius: 30px;
+  margin-top: 37px;
+  margin-left: 30px;
+  background-color: #f7f9f9;
+  padding: 5px;
+}
+.iconContainer {
+  text-align: center;
+  justify-content: left;
+  align-items: center;
+  display: flex;
+}
+
+.employee {
+  color: #2c3531;
+  font-family: "League Spartan";
+  margin-top: 38px;
+  font-size: 20px;
+  margin-left: 19px;
+}
+
+.second_card {
+  background-color: #f7f9f9;
+  width: 458px;
+  height: 243px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  margin-left: 29px;
+  margin-right: 29px;
+  margin-top: 80px;
+  border-radius: 30px;
+  margin-bottom: 47px;
+}
+
+.email_icon {
+  width: 27px;
+  height: 22px;
+  margin-left: 33px;
+  margin-top: 45px;
+}
+.email_employee {
+  color: black;
+  margin-left: 9px;
+  margin-top: 50px;
+}
+.function {
+  color: #116466;
+  margin-top: 16px;
+  margin-left: 33px;
+}
+.skill {
+  color: #116466;
+  margin-top: 16px;
+  margin-left: 33px;
+}
+
+.email_container {
+  display: flex;
+}
+
+.arrow_icon {
+  color: #116466;
+  width: 20px;
+  height: 15px;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+.skill_container {
+  display: flex;
+}
+
+.skill_options {
+  list-style-type: none;
+  margin: 0;
+  padding: 25px;
+}
+
+.skill_options li {
+  padding: 5px;
+  cursor: pointer;
+  color: #116466;
+}
+
+.skill_options li:hover {
+  background-color: white;
+}
+
+.common_window {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 10px;
+  width: 600px;
+}
+
+.levelButtons button,
+.subOptions button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+}
+.levelButtons button:hover,
+.subOptions button:hover {
+  background-color: #e0e0e0;
+}
+
+.selectedOptionContainer {
+  margin-top: 20px;
+}
+.subOptions ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+.subOptions li {
+  padding: 5px;
+  cursor: pointer;
+  color: #116466;
+}
+
+.subOptions li:hover {
+  background-color: white;
+}
+.subOptions {
+  width: 115px;
+  height: 112px;
+  border-radius: 30px;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  background-color: #fefefe;
+  z-index: 1;
+  border: 1px solid #888;
+  border-radius: 8px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.modal_content {
+  display: flex;
+  flex-direction: column;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.select_level {
+  margin-top: 0;
+}
+
+.skill_selection {
+  display: flex;
+  flex-direction: column;
 }

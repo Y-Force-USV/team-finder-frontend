@@ -1,17 +1,141 @@
 .projectsContainer {
   display: flex;
-  flex-grow: 1;
-  padding: 40px;
-  background-color: #116466;
-  text-align: center;
-  color: white;
-  width: calc(100%-220px);
-  margin-left: 38px;
-  height: 43px;
-  margin-top: 41px;
-  margin-right: 32px;
-  border-radius: 8px;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-right: 20px;
 }
 .pageContainer {
   display: flex;
+}
+
+.message {
+  font-size: 25px;
+  color: white;
+  font-family: "League Spartan";
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-right: 35px;
+}
+
+.square {
+  background-color: #116466;
+  padding: 10px;
+  border-radius: 8px;
+  height: 60px;
+  width: 950px;
+  margin-top: 35px;
+  margin-right: 35px;
+  display: flex;
+  align-items: center;
+  margin-left: 56px;
+}
+
+.icon {
+  width: 15px;
+  height: 15px;
+}
+
+.search_projects {
+  border: none;
+  margin-right: 83px;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 25px;
+  margin-left: auto;
+}
+.search_input {
+  border: none;
+  width: 180px;
+  height: 25px;
+  margin-left: 5px;
+}
+
+.search_img {
+  margin-right: 10px;
+}
+
+.table {
+  width: 900px;
+  border-collapse: collapse;
+  margin: 40px 0;
+  margin-left: 20px;
+  border-top-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.search input::placeholder {
+  color: #90959d;
+}
+
+.header {
+  font-weight: bold;
+  color: #001845;
+  margin-left: 0px;
+  border-radius: 8px;
+  width: 950px;
+  height: 60px;
+  border-top-left-radius: 8px;
+}
+
+.header th {
+  text-align: left;
+  padding: 15px;
+}
+
+.projects {
+  display: table-row;
+  background-color: white;
+  overflow: hidden;
+  margin-right: 900px;
+  border-radius: 9px;
+}
+
+.projects td {
+  padding: 15px;
+  color: #023e7d;
+  position: relative;
+}
+table tr:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+table td:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+table td:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.projects {
+  cursor: pointer;
+  transition: 0.2s;
+}
+.projects:hover {
+  transform: scale(1.01);
+}
+.more_information {
+  margin-right: 0px;
+  width: 24px;
+  height: 24px;
+  margin-left: auto;
+}
+
+.more_information_container {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
 }

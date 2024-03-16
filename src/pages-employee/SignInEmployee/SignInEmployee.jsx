@@ -8,14 +8,36 @@ import { Link, useNavigate } from "react-router-dom";
 import Password from "../../assets/password.svg";
 ///import { useNavigate } from "react-router-dom";
 
-function SignInEmployee({ setSidebarActiveButton }) {
+function SignInEmployee() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const [name, setName] = useState("");
 
   // const handleSignIn = () => {
   //   navigate("/dashboard");
   //   setSidebarActiveButton("/dashboard");
   // };
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+      if (data.error) {
+        alert(data.error);
+      }
+    } catch (error) {
+      alert("An error occurred");
+    }
+  }
   return (
     <div className={SignInEmployeeCSS.page}>
       <div className={SignInEmployeeCSS.container}>
@@ -31,14 +53,23 @@ function SignInEmployee({ setSidebarActiveButton }) {
 
           <h1 className={SignInEmployeeCSS.title}>Login to Your Account</h1>
 
-          <div className={SignInEmployeeCSS.signin_inputs}>
+          <form
+            className={SignInEmployeeCSS.signin_inputs}
+            onSubmit={handleSubmit}
+          >
             <div className={SignInEmployeeCSS.container_input}>
               <img
                 src={Email}
                 alt="Email"
                 className={SignInEmployeeCSS.input_logo}
-              ></img>
-              <input type="email" placeholder="Email" required />
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              ></input>
             </div>
 
             <div className={SignInEmployeeCSS.container_input}>
@@ -46,16 +77,20 @@ function SignInEmployee({ setSidebarActiveButton }) {
                 src={Password}
                 alt="Password"
                 className={SignInEmployeeCSS.input_logo}
-              ></img>
-              <input type="password" placeholder="Password" required />
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              ></input>
             </div>
-          </div>
-          <Link
-            to="/dashboard-employee"
-            className={SignInEmployeeCSS.signin_btn_link}
-          >
-            <button className={SignInEmployeeCSS.signin_btn}>SIGN IN</button>
-          </Link>
+
+            <div className={SignInEmployeeCSS.signin_btn_link}>
+              <button className={SignInEmployeeCSS.signin_btn}>SIGN IN</button>
+            </div>
+          </form>
           <p className={SignInEmployeeCSS.signin_text}>
             You don't have an account?
             <Link
