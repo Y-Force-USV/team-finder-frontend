@@ -12,8 +12,8 @@
   background-color: white;
 }
 
-.content {
-  display: flex;
+.name_input {
+  font-size: 18px;
 }
 
 .add_name {
@@ -21,9 +21,14 @@
   background-color: #e9f4f1;
   height: 50px;
   width: 582px;
-  border: none;
   border-radius: 8px;
+  display: flex;
   align-items: center;
+}
+
+.add_name input {
+  height: auto;
+  margin: 10px;
 }
 
 .manager {
@@ -39,12 +44,13 @@
 
 .manager p {
   margin-left: 20px;
-  font-size: 12px;
+  font-size: 18px;
   color: #116466;
 }
 
 .arrow {
-  margin-left: 330px;
+  margin-left: 280px;
+  cursor: pointer;
 }
 
 .name_input {
@@ -57,9 +63,7 @@
 
 .buttons {
   display: flex;
-  margin-top: 180px;
-  width: 100%;
-  margin-left: 320px;
+  margin-top: 20px;
 }
 
 .submit_btn {
@@ -70,7 +74,6 @@
   background-color: #116466;
   text-align: center;
   color: white;
-  margin-right: 250px;
 }
 
 .close_btn {
@@ -81,4 +84,48 @@
   background-color: #116466;
   text-align: center;
   color: white;
+  margin-left: 300px;
+  display: flex;
+}
+
+.employee_table {
+  width: 560px;
+  border-collapse: separate;
+  margin-top: 20px;
+  border-spacing: 0 10px;
+}
+
+.employee_table thead {
+  background-color: white;
+}
+
+.employee_table tbody {
+  background-color: #e9f4f1;
+}
+
+.employee_table tbody tr {
+  margin-bottom: -3px;
+}
+
+.employee_table th,
+.employee_table td {
+  padding: 10px;
+  text-align: left;
+}
+
+.employee_table th {
+  background-color: white;
+}
+
+.employee_table td {
+  border-bottom: 1px;
+}
+
+.employee_table button {
+  border: none;
+  background-color: #e9f4f1;
+  cursor: pointer;
+}
+.add_button {
+  background-color: #e9f4f1;
 }
