@@ -27,7 +27,7 @@
   height: 30px;
   width: 260px;
   border-radius: 8px;
-  margin-top: 8px;
+  margin-top: 10px;
   background-color: #e9f4f1;
 }
 
@@ -38,6 +38,8 @@
 .signup_inputs {
   display: flex;
   flex-direction: column;
+  align-items: center;
+
   margin-bottom: 31px;
 }
 
@@ -75,7 +77,6 @@ input[type="password"] {
 .signup_btn_link {
   text-decoration: none;
   margin-top: 30px;
-  margin-left: 50px;
 }
 
 .signin {

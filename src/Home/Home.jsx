@@ -18,21 +18,20 @@ function Home() {
         </div>
 
         <div className={HomeCSS.account_type}>
-          <Link to="/signup-admin" className={HomeCSS.square}>
+          <Link to="/register" className={HomeCSS.square}>
             <img
               src={Organization}
               alt="Organization"
               className={HomeCSS.icons}
             ></img>
-            <p>Admin</p>
+            <p>Register as Admin</p>
           </Link>
 
-          <Link to="/signup-employee" className={HomeCSS.square}>
+          <Link to="/login" className={HomeCSS.square}>
             <img src={Account} alt="Account" className={HomeCSS.icons} />
-            <p>Employee</p>
+            <p>Login</p>
           </Link>
         </div>
-        <p className={HomeCSS.message}>Your journey starts with a click!</p>
       </div>
     </div>
   );
