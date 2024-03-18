@@ -6,7 +6,6 @@ import Email from "../../assets/email.svg";
 import Filter from "../../assets/filter.svg";
 import MoreInformation from "../../assets/more-information.svg";
 import Search from "../../assets/search.svg";
-import { BACKEND_URL } from "../../common/constants";
 
 function Employees() {
   const employees = [
@@ -58,7 +57,7 @@ function Employees() {
       return;
     }
 
-    const link = `${BACKEND_URL}/register/${organizationId}`;
+    const link = `https://atc-2024-y-force-fe-linux-web-app.azurewebsites.net//register/${organizationId}`;
     await navigator.clipboard.writeText(link);
     alert("Invitation URL copied to clipboard!");
   };
@@ -92,7 +91,12 @@ function Employees() {
               height={"15px"}
             ></img>
           </div>
-          <button className={EmployeesCSS.add_btn}>COPY REGISTER URL</button>
+          <button
+            className={EmployeesCSS.add_btn}
+            onClick={generateAndCopyLink}
+          >
+            COPY REGISTER URL
+          </button>
         </div>
       </div>
       <div className={EmployeesCSS.cards}>
