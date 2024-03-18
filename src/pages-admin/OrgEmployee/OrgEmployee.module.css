@@ -16,15 +16,23 @@
   display: flex;
   align-items: center;
   margin-left: 100px;
+  position: relative;
+}
+
+.arrow_img {
+  margin-left: 5px;
 }
 
 .name {
   font-size: 28px;
+  margin-bottom: 12px;
 }
 
 .role {
   font-size: 23px;
   color: #116466;
+  display: flex;
+  justify-content: baseline;
 }
 
 .info {
@@ -44,18 +52,11 @@
 
 .department {
   margin-left: 30px;
-  top: 15px;
+  top: 20px;
   position: absolute;
   display: flex;
   color: white;
-}
-
-.skills {
-  top: 40px;
-  margin-left: 30px;
-  position: absolute;
-  display: flex;
-  color: white;
+  font-size: 25px;
 }
 
 .email {
@@ -68,4 +69,87 @@
 .employee_email {
   color: white;
   margin-left: 5px;
+}
+
+.skills {
+  top: 60px;
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  color: white;
+  position: absolute;
+}
+
+.skills p {
+  font-size: 18px;
+  margin-bottom: 85px;
+}
+
+.skills_container {
+  margin-top: 10px;
+}
+
+.skill_name {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 15px;
+}
+
+.skill_name img {
+  margin-right: 5px;
+  margin-left: 7px;
+}
+
+.skill_name p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.modal {
+  position: absolute;
+  background-color: #f7f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  top: 30px;
+  left: 700px;
+  width: 300px;
+  height: 150px;
+  overflow-y: auto;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #116466;
+}
+
+.select {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #116466;
+}
+
+.select:hover {
+  color: #116466;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  cursor: pointer;
+  padding: 5px 0;
+  transition: color 0.2s ease;
+  list-style-type: none;
+  margin-left: 5px;
+}
+
+ul li:hover {
+  color: #116466;
 }

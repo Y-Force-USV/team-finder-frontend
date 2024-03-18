@@ -45,12 +45,6 @@ function OrganizationAccount() {
         },
         body: JSON.stringify({ name, email, password, orgname, address }),
       });
-
-      // const result = await response.json();
-      // if (!response.ok) {
-      //   throw new Error(`Error:`);
-      // }
-
       navigate("/dashboard-admin");
     } catch (error) {
       alert(error.message);

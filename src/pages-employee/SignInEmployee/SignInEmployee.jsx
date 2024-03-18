@@ -6,17 +6,11 @@ import Illustration from "../../assets/illustration-employee.svg";
 import Email from "../../assets/email.svg";
 import { Link, useNavigate } from "react-router-dom";
 import Password from "../../assets/password.svg";
-///import { useNavigate } from "react-router-dom";
 
 function SignInEmployee() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-
-  // const handleSignIn = () => {
-  //   navigate("/dashboard");
-  //   setSidebarActiveButton("/dashboard");
-  // };
 
   async function handleSubmit(event) {
     event.preventDefault();
