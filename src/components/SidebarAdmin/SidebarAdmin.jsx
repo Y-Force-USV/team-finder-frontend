@@ -18,7 +18,7 @@ function SidebarAdmin() {
   };
   const organizationName =
     localStorage.getItem("organizationName") || "Default Organization";
-  const organizationAdmin = localStorage.getItem("userName") || "Default Admin";
+  const userName = localStorage.getItem("userName") || "Default Admin";
   return (
     <div className={SidebarAdminCSS.sidebar_cover}>
       <div className={SidebarAdminCSS.logo}>
