@@ -6,6 +6,7 @@ import Email from "../../assets/email.svg";
 import Filter from "../../assets/filter.svg";
 import MoreInformation from "../../assets/more-information.svg";
 import Search from "../../assets/search.svg";
+import { BACKEND_URL } from "../../common/constants";
 
 function Employees() {
   const employees = [
@@ -57,7 +58,7 @@ function Employees() {
       return;
     }
 
-    const link = `http://localhost:5173/register/${organizationId}`;
+    const link = `${BACKEND_URL}/register/${organizationId}`;
     await navigator.clipboard.writeText(link);
     alert("Invitation URL copied to clipboard!");
   };

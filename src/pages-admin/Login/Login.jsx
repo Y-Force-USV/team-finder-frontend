@@ -33,7 +33,7 @@ function Login() {
         console.log(data.accessToken);
         localStorage.setItem("accessToken", data.accessToken);
         localStorage.setItem("organizationName", data.organizationName);
-        localStorage.setItem("organizationAdmin", data.organizationAdmin);
+        localStorage.setItem("userName", data.userName);
         localStorage.setItem("organizationId", data.organizationId);
 
         navigate("/dashboard-admin");
