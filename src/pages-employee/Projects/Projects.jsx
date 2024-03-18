@@ -44,13 +44,15 @@ function Projects() {
             <td>Frontend</td>
             <td>Closed</td>
             <td>8 hours</td>
-            <div className={ProjectsCSS.more_information_container}>
-              <img
-                src={MoreInformation}
-                alt="MoreInformation"
-                className={ProjectsCSS.more_information}
-              ></img>
-            </div>
+            <td>
+              <div className={ProjectsCSS.more_information_container}>
+                <img
+                  src={MoreInformation}
+                  alt="MoreInformation"
+                  className={ProjectsCSS.more_information}
+                />
+              </div>
+            </td>
           </tr>
         </tbody>
       </table>

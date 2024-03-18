@@ -134,8 +134,10 @@ table td:last-child {
 
 .more_information_container {
   position: absolute;
-  right: 10px;
+
   bottom: 10px;
   display: flex;
-  align-items: center;
+
+  margin-right: 18px;
+  margin-left: 3px;
 }
