@@ -47,6 +47,21 @@ function Employees() {
     },
   ];
 
+  const userDetails = JSON.parse(localStorage.getItem("userDetails") || "{}");
+  const organizationId =
+    userDetails.organizationId || localStorage.getItem("organizationId");
+
+  const generateAndCopyLink = async () => {
+    if (!organizationId) {
+      console.error("No organization ID found");
+      return;
+    }
+
+    const link = `http://localhost:5173/register/${organizationId}`;
+    await navigator.clipboard.writeText(link);
+    alert("Invitation URL copied to clipboard!");
+  };
+
   return (
     <div className={EmployeesCSS.employees_container}>
       <div className={EmployeesCSS.buttons}>
@@ -76,7 +91,7 @@ function Employees() {
               height={"15px"}
             ></img>
           </div>
-          <button className={EmployeesCSS.add_btn}>GENERATE URL</button>
+          <button className={EmployeesCSS.add_btn}>COPY REGISTER URL</button>
         </div>
       </div>
       <div className={EmployeesCSS.cards}>
