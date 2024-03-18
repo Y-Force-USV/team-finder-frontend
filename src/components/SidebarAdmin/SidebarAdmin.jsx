@@ -18,8 +18,7 @@ function SidebarAdmin() {
   };
   const organizationName =
     localStorage.getItem("organizationName") || "Default Organization";
-  const organizationAdmin =
-    localStorage.getItem("organizationAdmin") || "Default Admin";
+  const organizationAdmin = localStorage.getItem("userName") || "Default Admin";
   return (
     <div className={SidebarAdminCSS.sidebar_cover}>
       <div className={SidebarAdminCSS.logo}>
@@ -32,9 +31,7 @@ function SidebarAdmin() {
         <div className={SidebarAdminCSS.organization_name}>
           {organizationName}
         </div>
-        <div className={SidebarAdminCSS.organization_admin}>
-          {organizationAdmin}
-        </div>
+        <div className={SidebarAdminCSS.organization_admin}>{userName}</div>
       </div>
       <div className={SidebarAdminCSS.buttons}>
         <div className={SidebarAdminCSS.main_buttons}>
