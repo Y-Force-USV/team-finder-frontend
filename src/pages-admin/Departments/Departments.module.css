@@ -93,16 +93,13 @@
 }
 
 .departments {
-  /* display: table-row; */
   background-color: white;
   overflow: hidden;
-  margin: 0;
 }
 
 .departments td {
   padding: 15px;
   color: #116466;
-  margin: 0;
 }
 
 table td:first-child {
