@@ -1,5 +1,5 @@
 .sidebar_cover {
-  min-height: 100vh;
+  height: 100vh;
   background-color: white;
   width: 220px;
   display: flex;
@@ -8,8 +8,8 @@
 }
 
 .logo {
-  margin-top: 35px;
-  margin-bottom: 35px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .profile {
@@ -27,16 +27,24 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
 }
 
 .main_buttons {
   display: flex;
   flex-direction: column;
-  margin-bottom: 227px;
 }
 
-.main_buttons button {
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin-bottom: 10px;
+}
+
+.main_buttons button,
+.footer_buttons button {
   background-color: #ffffff;
   border-radius: 8px;
   border: none;
@@ -45,7 +53,7 @@
   width: 152px;
   height: 32px;
   color: #116466;
-  margin-bottom: 15px;
+  margin-bottom: 2px;
 }
 
 .main_buttons button:hover {
@@ -70,28 +78,9 @@
   text-decoration: none;
 }
 
-.buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-
 .footer_buttons {
   display: flex;
   flex-direction: column;
-}
-
-.footer_buttons button {
-  background-color: #ffffff;
-  border-radius: 8px;
-  border: none;
-  display: flex;
-  align-items: center;
-  width: 152px;
-  height: 32px;
-  color: #116466;
-  margin-bottom: 13px;
 }
 
 .footer_buttons button:hover {

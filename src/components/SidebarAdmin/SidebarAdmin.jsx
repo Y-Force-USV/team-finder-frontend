@@ -7,20 +7,34 @@ import Logout from "../../assets/logout.svg";
 import Office from "../../assets/office.svg";
 import Settings from "../../assets/settings.svg";
 import Dashboard from "../../assets/dashboard.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function SidebarAdmin() {
+  const navigate = useNavigate();
+
+  const clearLocalStorage = () => {
+    localStorage.clear();
+    navigate("/login");
+  };
+  const organizationName =
+    localStorage.getItem("organizationName") || "Default Organization";
+  const organizationAdmin =
+    localStorage.getItem("organizationAdmin") || "Default Admin";
   return (
     <div className={SidebarAdminCSS.sidebar_cover}>
       <div className={SidebarAdminCSS.logo}>
         <img src={Logo} alt="Logo" />
       </div>
       <div className={SidebarAdminCSS.profile}>
-        <img src={Office} alt="Office" width={"50px"} height={"50px"} />
+        <img src={Office} alt="Office" width={"30px"} height={"30px"} />
       </div>
       <div className={SidebarAdminCSS.text}>
-        <div className={SidebarAdminCSS.organization_name}>ASSIST</div>
-        <div className={SidebarAdminCSS.organization_admin}>Ionela Lungu</div>
+        <div className={SidebarAdminCSS.organization_name}>
+          {organizationName}
+        </div>
+        <div className={SidebarAdminCSS.organization_admin}>
+          {organizationAdmin}
+        </div>
       </div>
       <div className={SidebarAdminCSS.buttons}>
         <div className={SidebarAdminCSS.main_buttons}>
@@ -72,8 +86,11 @@ function SidebarAdmin() {
             />
             Settings
           </button>
-          <Link to="/signin-admin" className={SidebarAdminCSS.logout_link}>
-            <button className={SidebarAdminCSS.logout}>
+          <div className={SidebarAdminCSS.logout_link}>
+            <button
+              className={SidebarAdminCSS.logout}
+              onClick={clearLocalStorage}
+            >
               <img
                 src={Logout}
                 alt="Logout"
@@ -83,7 +100,7 @@ function SidebarAdmin() {
               />
               Logout
             </button>
-          </Link>
+          </div>
         </div>
       </div>
     </div>
