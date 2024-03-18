@@ -82,16 +82,16 @@
   height: 253px;
   background-color: white;
   border-radius: 10px;
-  display: column;
   position: relative;
-  justify-content: space-between;
+  flex: 0 0 calc(33.33% - 20px);
+  margin-bottom: 20px;
 }
 
 .profile {
   background-color: #f7f9f9;
   height: 59px;
   width: 59px;
-  margin-left: 9px;
+  margin-left: 30px;
   margin-top: 4px;
   align-items: center;
   display: flex;
@@ -101,26 +101,28 @@
   padding: 10px;
 }
 .info {
-  margin-left: 16px;
+  margin-left: 20px;
 }
 
 .name {
   display: inline-block;
   margin-right: 5px;
-  font-size: 14px;
+  font-size: 16px;
+  margin-left: 20px;
 }
 
 .role {
   color: #116466;
   margin-top: 7px;
   font-size: 12px;
+  margin-left: 20px;
 }
 
 .info_card {
   width: 244px;
   height: 111px;
   background-color: #f7f9f9;
-  margin-left: 16px;
+  margin-left: 35px;
   margin-top: 7px;
   border-radius: 10px;
   display: flex;
@@ -129,7 +131,7 @@
 
 .information_img {
   position: absolute;
-  margin-left: 230px;
+  margin-left: 270px;
   margin-top: -60px;
   margin-right: 18px;
 }
@@ -139,9 +141,10 @@
 }
 
 .department {
-  margin-left: 20px;
+  margin-left: px;
   color: #116466;
   margin-top: 15px;
+  margin-left: 20px;
 }
 
 .department_name {
@@ -163,20 +166,27 @@
   color: black;
 }
 
-.top_cards {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-around;
-  padding: 0 65px;
-}
-
+.top_cards,
 .bottom_cards {
   display: flex;
-  align-items: baseline;
+  flex-wrap: wrap;
   justify-content: space-around;
   padding: 0 65px;
 }
 
 .cards {
   margin-top: 12px;
+}
+
+.role {
+  color: #116466;
+  margin-top: 7px;
+  font-size: 12px;
+  display: flex;
+  align-items: baseline;
+}
+
+.role:not(:last-child)::after {
+  content: ",";
+  margin-right: 5px;
 }

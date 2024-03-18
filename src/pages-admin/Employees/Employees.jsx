@@ -6,7 +6,47 @@ import Email from "../../assets/email.svg";
 import Filter from "../../assets/filter.svg";
 import MoreInformation from "../../assets/more-information.svg";
 import Search from "../../assets/search.svg";
+
 function Employees() {
+  const employees = [
+    {
+      name: "Lupastean Sorin",
+      roles: ["Project Manager", "Designer"],
+      email: "sorin.lupastean@student.usv.ro",
+      department: "Design",
+    },
+    {
+      name: "Soldan Cristina",
+      roles: ["Project Manager"],
+      email: "cristina.soldan1@student.usv.ro",
+      department: "Frontend",
+    },
+    {
+      name: "Burlacu Alina",
+      roles: ["Employee"],
+      email: "alina.burlacu@student.usv.ro",
+      department: "Backend",
+    },
+    {
+      name: "Burtila Daniel",
+      roles: ["Department Manager"],
+      email: "daniel.burtila@student.usv.ro",
+      department: "Frontend",
+    },
+    {
+      name: "Birgauan Gavril",
+      roles: ["Design"],
+      email: "gavril.birgauan@student.usv.ro",
+      department: "Employee",
+    },
+    {
+      name: "Cioltan Georgiana",
+      roles: ["Employee"],
+      email: "georgiana.cioltan@student.usv.ro",
+      department: "Employee",
+    },
+  ];
+
   return (
     <div className={EmployeesCSS.employees_container}>
       <div className={EmployeesCSS.buttons}>
@@ -41,175 +81,41 @@ function Employees() {
       </div>
       <div className={EmployeesCSS.cards}>
         <div className={EmployeesCSS.top_cards}>
-          <div className={EmployeesCSS.employee_card}>
-            <div className={EmployeesCSS.top}>
-              <div className={EmployeesCSS.profile}>
-                <img
-                  className={EmployeesCSS.profile_img}
-                  src={Account}
-                  alt="Profile"
-                  width={"40px"}
-                  height={"42px"}
-                />
-              </div>
-              <div>
-                <Link to="/orgemployee">
+          {employees.map((employee, index) => (
+            <div key={index} className={EmployeesCSS.employee_card}>
+              <div className={EmployeesCSS.top}>
+                <div className={EmployeesCSS.profile}>
                   <img
-                    className={EmployeesCSS.information_img}
-                    src={MoreInformation}
-                    alt="Information"
+                    className={EmployeesCSS.profile_img}
+                    src={Account}
+                    alt="Profile"
+                    width={"40px"}
+                    height={"42px"}
                   />
-                </Link>
-              </div>
-            </div>
-
-            <div className={EmployeesCSS.info}>
-              <div className={EmployeesCSS.name}>Lupastean Sorin</div>
-              <div className={EmployeesCSS.role}> Project Manager</div>
-            </div>
-            <div className={EmployeesCSS.info_card}>
-              <div className={EmployeesCSS.card_text}>
-                <div className={EmployeesCSS.department}>Department</div>
-                <div className={EmployeesCSS.department_name}>Design</div>
-              </div>
-
-              <div className={EmployeesCSS.email}>
-                <img
-                  className={EmployeesCSS.email_img}
-                  src={Email}
-                  alt="Email"
-                  width={"12px"}
-                  height={"9px"}
-                ></img>
-                <div className={EmployeesCSS.employee_email}>
-                  sorin.lupastean@student.usv.ro
+                </div>
+                <div>
+                  <Link to="/orgemployee">
+                    <img
+                      className={EmployeesCSS.information_img}
+                      src={MoreInformation}
+                      alt="Information"
+                    />
+                  </Link>
                 </div>
               </div>
-            </div>
-          </div>
 
-          <div className={EmployeesCSS.employee_card}>
-            <div className={EmployeesCSS.top}>
-              <div className={EmployeesCSS.profile}>
-                <img
-                  className={EmployeesCSS.profile_img}
-                  src={Account}
-                  alt="Profile"
-                  width={"40px"}
-                  height={"42px"}
-                />
-              </div>
-              <div>
-                <img
-                  className={EmployeesCSS.information_img}
-                  src={MoreInformation}
-                  alt="Information"
-                />
-              </div>
-            </div>
-
-            <div className={EmployeesCSS.info}>
-              <div className={EmployeesCSS.name}>Soldan Cristina</div>
-              <div className={EmployeesCSS.role}> Project Manager</div>
-            </div>
-
-            <div className={EmployeesCSS.info_card}>
-              <div className={EmployeesCSS.card_text}>
-                <div className={EmployeesCSS.department}>Department</div>
-                <div className={EmployeesCSS.department_name}>Frontend</div>
-              </div>
-
-              <div className={EmployeesCSS.email}>
-                <img
-                  className={EmployeesCSS.email_img}
-                  src={Email}
-                  alt="Email"
-                  width={"12px"}
-                  height={"9px"}
-                ></img>
-                <div className={EmployeesCSS.employee_email}>
-                  cristina.soldan1@student.usv.ro
+              <div className={EmployeesCSS.info}>
+                <div className={EmployeesCSS.name}>{employee.name}</div>
+                <div className={EmployeesCSS.role}>
+                  {employee.roles.join(", ")}
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div className={EmployeesCSS.employee_card}>
-            <div className={EmployeesCSS.top}>
-              <div className={EmployeesCSS.profile}>
-                <img
-                  className={EmployeesCSS.profile_img}
-                  src={Account}
-                  alt="Profile"
-                  width={"40px"}
-                  height={"42px"}
-                />
-              </div>
-              <div>
-                <img
-                  className={EmployeesCSS.information_img}
-                  src={MoreInformation}
-                  alt="Information"
-                />
-              </div>
-            </div>
-
-            <div className={EmployeesCSS.info}>
-              <div className={EmployeesCSS.name}>Burlacu Alina</div>
-              <div className={EmployeesCSS.role}> Employee</div>
-            </div>
-
-            <div className={EmployeesCSS.info_card}>
-              <div className={EmployeesCSS.card_text}>
-                <div className={EmployeesCSS.department}>Department</div>
-                <div className={EmployeesCSS.department_name}>Backend</div>
-              </div>
-
-              <div className={EmployeesCSS.email}>
-                <img
-                  className={EmployeesCSS.email_img}
-                  src={Email}
-                  alt="Email"
-                  width={"12px"}
-                  height={"9px"}
-                ></img>
-                <div className={EmployeesCSS.employee_email}>
-                  alina.burlacu@student.usv.ro
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className={EmployeesCSS.bottom_cards}>
-          <div className={EmployeesCSS.employee_card}>
-            <div className={EmployeesCSS.top}>
-              <div className={EmployeesCSS.profile}>
-                <img
-                  className={EmployeesCSS.profile_img}
-                  src={Account}
-                  alt="Profile"
-                  width={"40px"}
-                  height={"42px"}
-                />
-              </div>
-              <div>
-                <img
-                  className={EmployeesCSS.information_img}
-                  src={MoreInformation}
-                  alt="Information"
-                />
-              </div>
-            </div>
-
-            <div className={EmployeesCSS.info}>
-              <div className={EmployeesCSS.name}>Burtila Daniel</div>
-              <div className={EmployeesCSS.role}> Department Manager</div>
-            </div>
-            <div>
               <div className={EmployeesCSS.info_card}>
                 <div className={EmployeesCSS.card_text}>
                   <div className={EmployeesCSS.department}>Department</div>
-                  <div className={EmployeesCSS.department_name}>Frontend</div>
+                  <div className={EmployeesCSS.department_name}>
+                    {employee.department}
+                  </div>
                 </div>
 
                 <div className={EmployeesCSS.email}>
@@ -221,108 +127,16 @@ function Employees() {
                     height={"9px"}
                   ></img>
                   <div className={EmployeesCSS.employee_email}>
-                    daniel.burtila@student.usv.ro
+                    {employee.email}
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className={EmployeesCSS.employee_card}>
-            <div className={EmployeesCSS.top}>
-              <div className={EmployeesCSS.profile}>
-                <img
-                  className={EmployeesCSS.profile_img}
-                  src={Account}
-                  alt="Profile"
-                  width={"40px"}
-                  height={"42px"}
-                />
-              </div>
-              <div>
-                <img
-                  className={EmployeesCSS.information_img}
-                  src={MoreInformation}
-                  alt="Information"
-                />
-              </div>
-            </div>
-
-            <div className={EmployeesCSS.info}>
-              <div className={EmployeesCSS.name}>Birgauan Gavril</div>
-              <div className={EmployeesCSS.role}> Design</div>
-            </div>
-
-            <div className={EmployeesCSS.info_card}>
-              <div className={EmployeesCSS.card_text}>
-                <div className={EmployeesCSS.department}>Department</div>
-                <div className={EmployeesCSS.department_name}>Employee</div>
-              </div>
-
-              <div className={EmployeesCSS.email}>
-                <img
-                  className={EmployeesCSS.email_img}
-                  src={Email}
-                  alt="Email"
-                  width={"12px"}
-                  height={"9px"}
-                ></img>
-                <div className={EmployeesCSS.employee_email}>
-                  gavril.birgauan@student.usv.ro
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className={EmployeesCSS.employee_card}>
-            <div className={EmployeesCSS.top}>
-              <div className={EmployeesCSS.profile}>
-                <img
-                  className={EmployeesCSS.profile_img}
-                  src={Account}
-                  alt="Profile"
-                  width={"40px"}
-                  height={"42px"}
-                />
-              </div>
-              <div>
-                <img
-                  className={EmployeesCSS.information_img}
-                  src={MoreInformation}
-                  alt="Information"
-                />
-              </div>
-            </div>
-
-            <div className={EmployeesCSS.info}>
-              <div className={EmployeesCSS.name}>Cioltan Georgiana</div>
-              <div className={EmployeesCSS.role}> Employee</div>
-            </div>
-            <div>
-              <div className={EmployeesCSS.info_card}>
-                <div className={EmployeesCSS.card_text}>
-                  <div className={EmployeesCSS.department}>Department</div>
-                  <div className={EmployeesCSS.department_name}>Employee</div>
-                </div>
-
-                <div className={EmployeesCSS.email}>
-                  <img
-                    className={EmployeesCSS.email_img}
-                    src={Email}
-                    alt="Email"
-                    width={"12px"}
-                    height={"9px"}
-                  ></img>
-                  <div className={EmployeesCSS.employee_email}>
-                    georgiana.cioltan@student.usv.ro
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
   );
 }
+
 export default Employees;
