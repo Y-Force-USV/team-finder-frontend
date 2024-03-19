@@ -14,7 +14,10 @@ function Profile() {
   const [subOptions, setSubOptions] = useState([]);
   const [selectedSkillLevel, setSelectedSkillLevel] = useState("");
   const [selectedExperienceLevel, setSelectedExperienceLevel] = useState("");
-  const [showAllSelections, setShowAllSelections] = useState(false);
+  const [selectedSkill, setSelectedSkill] = useState("");
+  const [selectedLibrary, setSelectedLibrary] = useState("");
+  const [selectedFramework, setSelectedFramework] = useState("");
+  const [selectedEngineering, setSelectedEngineering] = useState("");
 
   const toggleOptions = () => {
     setIsOpen(!isOpen);
@@ -26,7 +29,7 @@ function Profile() {
     setShowSubOptions(true);
     setSubOptions(getSubOptionsForOption(option));
 
-    setSelectedSubOption("");
+    setSelectedSkill("");
     setSelectedSkillLevel("");
     setSelectedExperienceLevel("");
   };
@@ -34,6 +37,8 @@ function Profile() {
   const handleSubOptionClick = (suboption) => {
     setSelectedSubOption(suboption);
     openModal();
+    // setSelectedSkill(suboption);
+    // setSelectedOption("");
   };
 
   const openModal = () => {
@@ -50,6 +55,7 @@ function Profile() {
 
   const handleSkillLevelSelection = (level) => {
     setSelectedSkillLevel(level);
+    // checkAllSelections();
   };
 
   const handleExperienceLevelSelection = (level) => {
@@ -58,13 +64,24 @@ function Profile() {
     setShowAllSelections(true);
   };
 
+  const checkAllSelections = () => {
+    if (
+      selectedOption &&
+      selectedSubOption &&
+      selectedSkillLevel &&
+      selectedExperienceLevel
+    ) {
+      setShowAllSelections(true);
+    }
+  };
+
   const getSubOptionsForOption = (option) => {
     return subOptionsMap[option] || [];
   };
 
   const subOptionsMap = {
     "Programming Language": ["C", "C++", "Java", "Python"],
-    Libraries: ["React", "Vue", "Angular", "jQuery", "jQuery", "Socket.IO"],
+    Libraries: ["React", "Vue", "Angular", "jQuery", "Socket.IO"],
     Frameworks: [
       "Express.js",
       "Django",
@@ -78,6 +95,15 @@ function Profile() {
       "Problem Solving",
     ],
   };
+
+  const [selectedOptions, setSelectedOptions] = useState({
+    skill: "",
+    level: "",
+    experience: "",
+    subOption: "",
+  });
+
+  const [showAllSelections, setShowAllSelections] = useState(false);
 
   return (
     <div className={ProfileCSS.profileContainer}>
@@ -235,5 +261,4 @@ function Profile() {
     </div>
   );
 }
-
 export default Profile;

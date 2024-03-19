@@ -1,9 +1,8 @@
 import React from "react";
 import HomeCSS from "./Home.module.css";
 import Logo from "../assets/Logo.svg";
-import Organization from "../assets/organization.svg";
-import Account from "../assets/account.svg";
 import { Link } from "react-router-dom";
+
 function Home() {
   return (
     <div className={HomeCSS.page}>
@@ -19,17 +18,11 @@ function Home() {
 
         <div className={HomeCSS.account_type}>
           <Link to="/register" className={HomeCSS.square}>
-            <img
-              src={Organization}
-              alt="Organization"
-              className={HomeCSS.icons}
-            ></img>
-            <p>Register as Admin</p>
+            <button>REGISTER</button>
           </Link>
 
           <Link to="/login" className={HomeCSS.square}>
-            <img src={Account} alt="Account" className={HomeCSS.icons} />
-            <p>Login</p>
+            <button>LOG IN</button>
           </Link>
         </div>
       </div>

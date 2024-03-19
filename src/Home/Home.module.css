@@ -2,9 +2,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  min-height: 93vh;
   margin: 0;
   padding: 0;
+  background-color: white;
 }
 .cover {
   background-color: #e9f4f1;
@@ -42,28 +43,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  line-height: 20px;
   background-color: #f7f9f9;
   border-radius: 15px;
-  width: 100px;
-  height: 120px;
+  width: 120px;
+  height: 50px;
   margin: 0 20px;
   text-decoration: none;
+  transition: background-color 0.3s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
-.square img {
-  width: 45px;
-  height: 45px;
-  justify-content: center;
-  margin-top: 15px;
+.square:hover {
+  background-color: #d1e7e4;
 }
-.square p {
+.square button {
+  border: none;
+  background-color: transparent;
   color: #2c3531;
-  margin-top: 8px;
+  margin-top: 18px;
   font-size: 16px;
   margin-left: 5px;
   text-decoration: none;
+  cursor: pointer;
+  outline: none;
 }
+
 .message {
   color: #2c3531;
   margin-top: 8px;
