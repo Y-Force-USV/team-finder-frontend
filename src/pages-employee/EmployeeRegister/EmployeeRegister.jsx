@@ -38,7 +38,7 @@ function EmployeeRegister() {
       });
       const data = await response.json();
       if (data.accesToken) {
-        navigate("/dashboard-admin");
+        navigate("/dashboard-employee");
       } else {
         console.error("Failed to register. Please try again.");
       }

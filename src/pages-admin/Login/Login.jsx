@@ -5,7 +5,6 @@ import Logo from "../../assets/Logo.svg";
 import Email from "../../assets/email.svg";
 import Password from "../../assets/password.svg";
 import Illustration from "../../assets/illustration-admin.svg";
-import { Link } from "react-router-dom";
 import { BACKEND_URL } from "../../common/constants";
 
 function Login() {
@@ -35,8 +34,15 @@ function Login() {
         localStorage.setItem("organizationName", data.organizationName);
         localStorage.setItem("userName", data.userName);
         localStorage.setItem("organizationId", data.organizationId);
+        localStorage.setItem("role", data.role);
 
-        navigate("/dashboard-admin");
+        if (data.role === "admin") {
+          navigate("/dashboard-admin");
+        } else if (data.role === "employee") {
+          navigate("/dashboard-employee");
+        } else {
+          throw new Error("Rol necunoscut");
+        }
       } else {
         alert(data.message || "Authentication failed");
       }
