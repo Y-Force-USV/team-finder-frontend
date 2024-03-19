@@ -1,0 +1,94 @@
+.ModalEmployees {
+  height: 415px;
+  width: calc(100% - 220px);
+  max-width: 715px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+
+.add_name {
+  margin-top: 40px;
+  background-color: #e9f4f1;
+  height: 50px;
+  width: 582px;
+  border: none;
+  border-radius: 8px;
+  align-items: center;
+}
+
+.employee {
+  background-color: #e9f4f1;
+  height: 50px;
+  width: 582px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.employee p {
+  margin-left: 20px;
+  font-size: 12px;
+  color: #116466;
+}
+
+.arrow {
+  margin-left: 330px;
+}
+
+.name_input {
+  border: none;
+  border-radius: 8px;
+  background-color: #e9f4f1;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.buttons {
+  display: flex;
+  margin-top: 360px;
+  width: 100%;
+  margin-left: 320px;
+  text-align: baseline;
+  position: fixed;
+}
+
+.add_button {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  margin: 5px;
+  background-color: #116466;
+  text-align: center;
+  color: white;
+  display: flex;
+  margin-left: 350px;
+}
+
+.submit_btn {
+  padding: 10px;
+  margin-right: 320px;
+  border-radius: 8px;
+  border: none;
+  height: 35px;
+  background-color: #116466;
+  text-align: center;
+  color: white;
+}
+
+.close_btn {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 8px;
+  border: none;
+  background-color: #116466;
+  text-align: center;
+  color: white;
+}
