@@ -1,9 +1,8 @@
-import React, { Suspense, useEffect } from "react";
+import React, { Suspense } from "react";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Navigate,
   useLocation,
   useNavigate,
 } from "react-router-dom";
@@ -38,12 +37,12 @@ function App() {
     "/orgemployee",
   ].includes(pathname);
 
-  useEffect(() => {
-    const token = localStorage.getItem("accessToken");
-    if (token) {
-      navigate("/dashboard-admin");
-    }
-  }, []);
+  // useEffect(() => {
+  //   const token = localStorage.getItem("accessToken");
+  //   if (token) {
+  //     navigate("/dashboard-admin");
+  //   }
+  // }, []);
 
   return (
     <Suspense fallback={<div>Loading...</div>}>

@@ -9,6 +9,15 @@ import Logout from "../../assets/logout.svg";
 import { Link } from "react-router-dom";
 
 function SidebarEmployee() {
+  const navigate = useNavigate();
+
+  const userName = localStorage.getItem("userName") || "Default User";
+  const userRole = localStorage.getItem("userRole") || "Employee";
+
+  const clearLocalStorageAndLogout = () => {
+    localStorage.clear();
+    navigate("/login");
+  };
   return (
     <div className={SidebarEmployeeCSS.sidebar_container}>
       <div className={SidebarEmployeeCSS.sidebar_cover}>
@@ -21,8 +30,8 @@ function SidebarEmployee() {
         </div>
 
         <div className={SidebarEmployeeCSS.text}>
-          <div className={SidebarEmployeeCSS.name}>Burțilă Daniel</div>
-          <div className={SidebarEmployeeCSS.role}>employee</div>
+          <div className={SidebarEmployeeCSS.name}>{userName}</div>
+          <div className={SidebarEmployeeCSS.role}>{userRole}</div>
         </div>
 
         <div className={SidebarEmployeeCSS.buttons}>
@@ -82,11 +91,8 @@ function SidebarEmployee() {
               Settings
             </button>
 
-            <Link
-              to="/signin-employee "
-              className={SidebarEmployeeCSS.logout_link}
-            >
-              <button>
+            <Link to="/login" className={SidebarEmployeeCSS.logout_link}>
+              <button onClick={clearLocalStorageAndLogout}>
                 <img
                   src={Logout}
                   alt="Logout"
