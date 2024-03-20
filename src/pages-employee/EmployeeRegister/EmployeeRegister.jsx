@@ -37,7 +37,7 @@ function EmployeeRegister() {
         }),
       });
       const data = await response.json();
-      if (data.accesToken) {
+      if (data.accessToken) {
         localStorage.setItem("accessToken", data.accessToken);
         localStorage.setItem("userName", name);
         localStorage.setItem("role", data.role || "employee");
