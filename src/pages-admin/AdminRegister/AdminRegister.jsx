@@ -53,8 +53,9 @@ function AdminRegister() {
         }),
       });
 
+      const result = await response.json();
+
       if (response.ok) {
-        const result = await response.json();
         localStorage.setItem("accessToken", result.accessToken);
         localStorage.setItem("organizationName", result.organizationName);
         localStorage.setItem("userName", result.userName);
@@ -62,10 +63,16 @@ function AdminRegister() {
 
         navigate("/dashboard-admin");
       } else {
-        throw new Error(result.mewwwage || "Something went wrong");
+        if (result.message === "Email already in use") {
+          setError(
+            "This email is already associated with an account. Please use a different email."
+          );
+        } else {
+          setError(result.message || "Something went wrong");
+        }
       }
     } catch (error) {
-      setError(error.message);
+      setError("Network error or server is unreachable.");
     }
   };
 
