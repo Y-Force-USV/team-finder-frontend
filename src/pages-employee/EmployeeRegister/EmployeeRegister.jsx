@@ -38,6 +38,10 @@ function EmployeeRegister() {
       });
       const data = await response.json();
       if (data.accesToken) {
+        localStorage.setItem("accessToken", data.accessToken);
+        localStorage.setItem("userName", name);
+        localStorage.setItem("role", data.role || "employee");
+
         navigate("/dashboard-employee");
       } else {
         console.error("Failed to register. Please try again.");
@@ -116,7 +120,7 @@ function EmployeeRegister() {
             </button>
           </Link>
           <p className={EmployeeRegisterCSS.signup_text}>
-            Already have an account?{" "}
+            Already have an account?
             <Link className={EmployeeRegisterCSS.signup_link} to="/login">
               Login
             </Link>
