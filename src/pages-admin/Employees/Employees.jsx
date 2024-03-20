@@ -58,7 +58,7 @@ function Employees() {
       return;
     }
 
-    const link = `${BACKEND_URL}/register/${organizationId}`;
+    const link = `https://atc-2024-y-force-fe-linux-web-app.azurewebsites.net/register/${organizationId}`;
     await navigator.clipboard.writeText(link);
     alert("Invitation URL copied to clipboard!");
   };

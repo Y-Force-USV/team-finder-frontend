@@ -1,3 +1,7 @@
+body {
+  background-color: #e9f4f1;
+}
+
 .sidebar_cover {
   height: 100vh;
   background-color: white;
@@ -94,10 +98,6 @@
 
 .organization_admin {
   color: #116466;
-}
-
-body {
-  background-color: #e9f4f1;
 }
 
 .logout_link {

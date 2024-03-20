@@ -7,8 +7,13 @@ function DashboardEmployee() {
       <div className={DashboardEmployeeCSS.message}>
         <p>Welcome to Team Finder!</p>
       </div>
-      <div className={DashboardEmployeeCSS.dashboard_image}>
-        <img src={DashboardIl2} alt="DashboardIl2"></img>
+      <div className={DashboardEmployeeCSS.illustration}>
+        <img
+          src={DashboardIl2}
+          alt="Dashboard"
+          width={"500px"}
+          height={"500px"}
+        />
       </div>
     </div>
   );

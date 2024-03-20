@@ -5,14 +5,13 @@ import Arrow from "../../assets/arrow.svg";
 const ModalEmployees = ({ isOpen, closeModal, onSubmit }) => {
   const [arrowRotated, setArrowRotated] = useState(false);
   const [selectedEmployeeName, setSelectedEmployeeName] = useState("");
-  const modalRef = useRef(null);
 
   const employees = [{ name: "Soldan Cristina" }, { name: "Lupastean Sorin" }];
 
   const handleSubmit = () => {
     if (selectedEmployeeName) {
       const selectedEmployeeName = document.querySelector(
-        ".${ModalEmployeesCSS.name_input}"
+        `.${ModalEmployeesCSS.name_input}`
       ).value;
       onSubmit(selectedEmployeeName, selectedEmployeeName);
       closeModal();

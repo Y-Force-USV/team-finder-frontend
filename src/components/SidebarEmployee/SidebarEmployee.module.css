@@ -33,13 +33,10 @@ body {
   align-items: center;
   margin-bottom: 40px;
 }
-.name {
-  margin-bottom: 10px;
-  color: #2c3531;
-}
 
-.role {
-  color: #116466;
+.main_buttons {
+  display: flex;
+  flex-direction: column;
 }
 
 .buttons {
@@ -48,35 +45,6 @@ body {
   justify-content: space-between;
   flex-grow: 1;
   margin-bottom: 10px;
-}
-
-.main_buttons {
-  display: flex;
-  flex-direction: column;
-}
-
-.main_buttons button:hover {
-  background-color: #e9f4f1;
-}
-
-.link_page {
-  text-decoration: none;
-  color: black;
-}
-
-.icon {
-  margin-left: 10px;
-  margin-right: 21px;
-}
-
-.footer_buttons {
-  display: flex;
-  flex-direction: column;
-  margin-top: 21px;
-}
-
-.logout_link {
-  text-decoration: none;
 }
 
 .main_buttons button,
@@ -90,6 +58,37 @@ body {
   height: 32px;
   color: #116466;
   margin-bottom: 2px;
+}
+
+.main_buttons button:hover {
+  background-color: #e9f4f1;
+}
+
+.link_page {
+  text-decoration: none;
+}
+
+.footer_buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon {
+  margin-left: 10px;
+  margin-right: 21px;
+}
+
+.name {
+  margin-bottom: 10px;
+  color: #2c3531;
+}
+
+.role {
+  color: #116466;
+}
+
+.logout_link {
+  text-decoration: none;
 }
 
 .footer_buttons button:hover {
