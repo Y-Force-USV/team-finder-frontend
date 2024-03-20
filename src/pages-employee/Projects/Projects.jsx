@@ -1,30 +1,64 @@
-import React from "react";
+import React, { useState } from "react";
 import ProjectsCSS from "./Projects.module.css";
-import SidebarEmployee from "../../components/SidebarEmployee/SidebarEmployee";
 import Search from "../../assets/search.svg";
-import MoreInformation from "../../assets/more-information.svg";
+import ModalEmployees from "../../components/ModalEmployees/ModalEmployees";
+
 function Projects() {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [projects, setProjects] = useState([]);
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
+  const addProject = (projectName, employee) => {
+    if (!employee || !projectName) return;
+    const newProject = {
+      name: projectName,
+      employee: employee,
+    };
+    setProjects([...projects, newProject]);
+    closeModal();
+  };
+
   return (
     <div className={ProjectsCSS.projectsContainer}>
-      <div className={ProjectsCSS.square}>
-        <p className={ProjectsCSS.message}>My Projects</p>
+      {modalIsOpen && <div className={ProjectsCSS.modal_background} />}
+      <div className={ProjectsCSS.message}>
+        <p>My Projects!</p>
       </div>
-
-      <div className={ProjectsCSS.search_projects}>
-        <input
-          type="text"
-          name="searchTerm"
-          placeholder="  Search..."
-          autoComplete="off"
-          className={ProjectsCSS.search_input}
-        />
-        <img
-          className={ProjectsCSS.search_img}
-          src={Search}
-          width={"15px"}
-          height={"15px"}
-          alt="Search"
-        ></img>
+      <div className={ProjectsCSS.right_buttons}>
+        <div className={ProjectsCSS.search_projects}>
+          <input
+            type="text"
+            name="searchTerm"
+            placeholder="Search..."
+            autoComplete="off"
+            className={ProjectsCSS.search_input}
+          />
+          <img className={ProjectsCSS.search_img} src={Search} alt="Search" />
+        </div>
+        <button
+          className={`${ProjectsCSS.add_btn} ${
+            modalIsOpen ? ProjectsCSS.modalOpen : ""
+          }`}
+          onClick={openModal}
+        >
+          + ADD NEW
+        </button>
+        {modalIsOpen && (
+          <div className={ProjectsCSS.modal_container}>
+            <ModalEmployees
+              isOpen={modalIsOpen}
+              closeModal={closeModal}
+              onSubmit={addProject}
+            />
+          </div>
+        )}
       </div>
 
       <table className={ProjectsCSS.table}>
@@ -35,28 +69,29 @@ function Projects() {
             <th>Status</th>
             <th>Worked hours/day</th>
             <th>Update</th>
-            <th></th>
+            <th />
           </tr>
         </thead>
         <tbody>
-          <tr className={ProjectsCSS.projects}>
-            <td>FutureSecure Technologies</td>
-            <td>Frontend</td>
-            <td>Closed</td>
-            <td>8 hours</td>
-            <td>
-              <div className={ProjectsCSS.more_information_container}>
-                <img
-                  src={MoreInformation}
-                  alt="MoreInformation"
-                  className={ProjectsCSS.more_information}
-                />
-              </div>
-            </td>
-          </tr>
+          {projects.map((project, index) => (
+            <tr key={index} className={ProjectsCSS.projects}>
+              <td>{project.name}</td>
+              <td>{project.employee}</td>
+              <td>In progress</td>
+              <td>8 hours</td>
+              <td>Closed</td>
+              <td></td>
+            </tr>
+          ))}
         </tbody>
       </table>
+      <ModalEmployees
+        isOpen={modalIsOpen}
+        closeModal={closeModal}
+        onSubmit={addProject}
+      />
     </div>
   );
 }
+
 export default Projects;
